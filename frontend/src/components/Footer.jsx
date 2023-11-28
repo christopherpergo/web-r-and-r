@@ -8,7 +8,7 @@ import { BrandLinkedin } from 'tabler-icons-react';
 // import { Login } from 'tabler-icons-react';
               
 
-const Footer = () => {
+const Footer = ({language}) => {
 
  const youtube ="#" ;
  const linkedin ="#";
@@ -16,23 +16,60 @@ const Footer = () => {
 
   return (
     <>
-<div className='padreFooter'>
+    <div className='componentFooter'></div>
+<div className= 'padreFooter'>
 
 <div className='logoFooter'>
-  <img src='https://res.cloudinary.com/dvoh9w1ro/image/upload/v1699034797/Logo_Oficial_-_Logo_Rojo_-_Fondo_Blanco_mn7lvf.jpg'/>
+
+  <img src='https://res.cloudinary.com/dvoh9w1ro/image/upload/v1701195280/Sem_T%C3%ADtulo-2_oowv09.png'/>
 </div>
 
 <div className='infoContacto'>
-   <p>
-    <span className='iconTexto'><PhoneCall size={20} strokeWidth={1} color={'white'} /></span> Teléfono:
-    <span className='informacionContacto'> (+34) 934.155.100 </span>
-  </p>
- 
-  <p><span className='iconTexto'><Mailbox size={20} strokeWidth={1} color={'white'}/></span> Email:
-  <span className='informacionContacto'> rodarbarcelona@rodaryrodar.com </span></p>
-  <p> <span className='iconTexto'><MapPin size={20} strokeWidth={1} color={'white'} /></span> Dirección:
-    <span className='informacionContacto'> Carrer de L'Església, 4-6 <br></br>Barcelona 08024  </span>
-  </p>
+<p>
+  <span className='iconTexto'>
+    <PhoneCall size={20} strokeWidth={1} color={'white'} />
+  </span>
+  {language === 'es'
+    ? 'Teléfono: '
+    : language === 'en'
+    ? 'Phone: '
+    : language === 'cat'
+    ? 'Telèfon: '
+    : ''}
+  <span className='informacionContacto'> (+34) 934.155.100 </span>
+</p>
+
+<p>
+  <span className='iconTexto'>
+    <Mailbox size={20} strokeWidth={1} color={'white'} />
+  </span>
+  {language === 'es'
+    ? 'Email: '
+    : language === 'en'
+    ? 'Email: '
+    : language === 'cat'
+    ? 'Correu electrònic: '
+    : ''}
+  <span className='informacionContacto'> rodarbarcelona@rodaryrodar.com </span>
+</p>
+
+<p>
+  <span className='iconTexto'>
+    <MapPin size={20} strokeWidth={1} color={'white'} />
+  </span>
+  {language === 'es'
+    ? 'Dirección: '
+    : language === 'en'
+    ? 'Address: '
+    : language === 'cat'
+    ? 'Adreça: '
+    : ''}
+  <span className='informacionContacto'>
+    Carrer de L'Església, 4-6
+    <br></br>
+    Barcelona 08024
+  </span>
+</p>
 </div>
 
 
@@ -52,19 +89,83 @@ const Footer = () => {
 </div>
 <div className='enlacesInternos'>
 
-  <div className='enlacesFooter'>
-<a href='#'>Inicio</a>
-<a href='#'>Nosotros</a>
-<a href='#'>Premios</a>
-<a href='#'>Contacto</a>
-  </div>
+<div className='enlacesFooter'>
+  <a href='#'>
+    {language === 'es'
+      ? 'Inicio'
+      : language === 'en'
+      ? 'Home'
+      : language === 'cat'
+      ? 'Inici'
+      : ''}
+  </a>
+  <a href='#'>
+    {language === 'es'
+      ? 'Nosotros'
+      : language === 'en'
+      ? 'About Us'
+      : language === 'cat'
+      ? 'Sobre Nosaltres'
+      : ''}
+  </a>
+  <a href='#'>
+    {language === 'es'
+      ? 'Premios'
+      : language === 'en'
+      ? 'Awards'
+      : language === 'cat'
+      ? 'Premis'
+      : ''}
+  </a>
+  <a href='#'>
+    {language === 'es'
+      ? 'Contacto'
+      : language === 'en'
+      ? 'Contact'
+      : language === 'cat'
+      ? 'Contacte'
+      : ''}
+  </a>
+</div>
 
-  <div className='enlacesFooter'>
-  <a href='#'>Peliculas</a>
-  <a href='#'>Series</a>
-  <a href='#'>Documentales</a>
-  <a href='#'>Diseño Web</a>
-    </div>
+<div className='enlacesFooter'>
+  <a href='#'>
+    {language === 'es'
+      ? 'Películas'
+      : language === 'en'
+      ? 'Movies'
+      : language === 'cat'
+      ? 'Pel·lícules'
+      : ''}
+  </a>
+  <a href='#'>
+    {language === 'es'
+      ? 'Series'
+      : language === 'en'
+      ? 'TV Shows'
+      : language === 'cat'
+      ? 'Sèries'
+      : ''}
+  </a>
+  <a href='#'>
+    {language === 'es'
+      ? 'Documentales'
+      : language === 'en'
+      ? 'Documentaries'
+      : language === 'cat'
+      ? 'Documentals'
+      : ''}
+  </a>
+  <a href='#'>
+    {language === 'es'
+      ? 'Diseño Web'
+      : language === 'en'
+      ? 'Web Design'
+      : language === 'cat'
+      ? 'Disseny Web'
+      : ''}
+  </a>
+</div>
 
 </div>
 
