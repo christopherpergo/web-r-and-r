@@ -1,35 +1,22 @@
-import { useState } from 'react';
-import { logo } from './assets';
+import React, { useState } from 'react';
+import Footer from './components/Footer';
+import { Premios } from './components/Premios';
+import './index.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [language, setLanguage] = useState('es');
+
+  const changeToSpanish = () => setLanguage('es');
+  const changeToCatalan = () => setLanguage('cat');
+  const changeToEnglish = () => setLanguage('en');
 
   return (
     <>
-      <div className='flex flex-col text-center h-screen items-center justify-center'>
-
-        <div className='flex'>
-
-          <a href="#" target="_blank">
-            <img src={logo} className="logo w-72" alt="logo homini" />
-          </a>
-        </div>
-
-        <h1 className="text-3xl font-secondary font-bold">
-          Tirabuzon
-        </h1>
-
-        <div className="card">
-          <button className="bg-rojo-rodar hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-3xl mt-2" onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-
-        </div>
-
-
-      </div>
+      <Premios language={language} changeToCatalan={changeToCatalan}
+       changeToEnglish={changeToEnglish} changeToSpanish={changeToSpanish} />
+      <Footer language={language} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

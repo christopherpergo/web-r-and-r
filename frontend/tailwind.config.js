@@ -1,5 +1,8 @@
-/** @type {import('tailwindcss').Config} */
+//  @type {import('tailwindcss').Config} 
+
+
 export default {
+
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -7,11 +10,15 @@ export default {
   theme: {
     extend: {
       colors:{
-        'rojo-rodar':'#BA0909'
+        primary: 'var(--primary-color)',
+        secondary: 'var(--secondary-color)',
       },
       fontFamily:{
-        primary:['Josefin Sans'],
-        secondary:['Mooli']
+        primary: ['var(--font-family-primary)'],
+        secondary: ['var(--font-family-secondary)'],
+        tertiary: ['var(--font-family-tertiary)'],
+        quaternary: ['var(--font-family-quaternary)'],
+        quinary: ['var(--font-family-quinary)'],
       }
     },
   },
